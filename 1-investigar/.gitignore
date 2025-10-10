@@ -1,0 +1,27 @@
+# Entorno virtual de Python
+venv/
+env/
+ENV/
+.venv
+
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Modelos y cachés de HuggingFace
+.cache/
+models/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Sistema
+.DS_Store
+Thumbs.db

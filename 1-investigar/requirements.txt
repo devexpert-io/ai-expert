@@ -1,0 +1,11 @@
+# Dependencias para el módulo 1-investigar
+# Fundamentos de LLMs con HuggingFace Transformers
+
+transformers>=4.35.0
+torch>=2.0.0
+
+numpy>=1.24.0
+requests>=2.31.0
+
+# Para mostrar barras de progreso durante la descarga de modelos
+tqdm>=4.65.0
