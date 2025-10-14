@@ -2,24 +2,22 @@
 Ejemplo 2: Cálculo de Probabilidades
 
 Muestra cómo un LLM calcula probabilidades para predecir el siguiente token.
-
-Uso: python 2-probabilidades.py "your text here"
+Modifica la variable PROMPT para experimentar con otras frases.
 """
 
-import sys
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-prompt = " ".join(sys.argv[1:])
+PROMPT = "La tecnología avanza rápidamente"
 
 print("Cargando modelo y tokenizador...")
 tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen2-0.5B")
 model = AutoModelForCausalLM.from_pretrained("Qwen/Qwen2-0.5B")
 
-print(f"\nTexto: {prompt}")
+print(f"\nTexto: {PROMPT}")
 
 # Tokenizar
-input_ids = tokenizer(prompt, return_tensors="pt").input_ids
+input_ids = tokenizer(PROMPT, return_tensors="pt").input_ids
 print(f"Tokens: {input_ids[0].tolist()}")
 
 # Obtener logits
