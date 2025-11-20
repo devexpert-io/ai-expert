@@ -33,6 +33,7 @@ generated_ids = model.generate(
     temperature=TEMPERATURE,
     top_k=TOP_K,
     top_p=TOP_P,
+    do_sample=True,
     repetition_penalty=REPETITION_PENALTY,
 )
 
